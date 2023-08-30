@@ -38,12 +38,11 @@ if __name__ == "__main__":
     dirname = os.path.dirname(__file__)
 
     #param needed for retrieving the ACORDAR runs and my runs for the scores file production
-    run_id = "standard_Stop"
+    run_id = "Stream_Jena_LightRDF_Deduplication"
     configuration = "[d]"
     similarity = "BM25Boost"
     similarity_acordar = "BM25F"
     score = "P.10"
-
 
     #trec eval executable
     trec_eval_path = "/home/manuel/Tesi/TREC/trec_eval/trec_eval"
@@ -54,9 +53,8 @@ if __name__ == "__main__":
     acordar_run_path = os.path.join(dirname, f'../../files/run/ACORDAR/{similarity_acordar}{configuration}.txt')
 
     #output file
-    output_scores_directory = os.path.join(dirname, f'../../files/run/ARDFS/scores/{run_id}/')
-    output_scores_directory = os.path.join(dirname, f'../../files/run/ACORDAR/scores')
-    output_scores_path = os.path.join(dirname, f'../../files/run/ARDFS/scores/{run_id}/{similarity}{configuration}.csv')
+    output_scores_directory = os.path.join(dirname, f'../../files/run/ARDFS/{run_id}/scores')
+    output_scores_path = os.path.join(dirname, f'../../files/run/ARDFS/{run_id}/scores/{similarity}{configuration}.csv')
     acordar_scores_path = os.path.join(dirname, f'../../files/run/ACORDAR/scores/{similarity_acordar}{configuration}.csv')
 
     #create directory for our scores if it does not exists 
