@@ -37,7 +37,7 @@ def generateOutputCSV(output_scores_path: str, trec_eval, score: str):
     output_scores_file.close()
 
 """
-This function will create the csv output scores files for ACORDAR
+This function will create the csv output scores files for the ACORDAR runs
 @param: run_path, directory path where all the runs are scored
 @param: no_empty, flag that indicates if we have to consider the qrels with empty datasets
 """
@@ -95,7 +95,7 @@ def generateAcordarScores(directory_run_path:str, no_empty:bool):
                 generateOutputCSV(output_scores_path, trec_eval, score)
         
 """
-This function will create the csv output scores files for ACORDAR
+This function will create the csv output scores files for the ARDFS runs
 @param: run_path, directory path where all the runs are scored
 @param: no_empty, flag that indicates if we have to consider the qrels with empty datasets
 """
@@ -152,7 +152,6 @@ def generateARDFScores(directory_run_path:str, no_empty:bool):
                 #generate our scores file
                 generateOutputCSV(output_scores_path, trec_eval, score)
         
-
 
 if __name__ == "__main__":
 

@@ -2,6 +2,11 @@ import scipy.stats as stats
 import os
 import pandas as pd
 
+"""
+This simple script will do a paired t-test between an RDFS specified run 
+and the corresponding ACORDAR runs
+"""
+
 dirname = os.path.dirname(__file__)
 
 configuration = "[m]"
